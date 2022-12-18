@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import RangeSlider from 'react-range-slider-input'
+import 'react-range-slider-input/dist/style.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +17,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <RangeSlider 
+          id='range-slider'
+          rangeSlideDisabled={true}
+          thumbsDisabled={[true,false]}
+          defaultValue={[0,50]}
+        />
       </main>
     </>
   )
